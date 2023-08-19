@@ -8,7 +8,5 @@ ENV WORDPRESS_DB_NAME=wordpressdb
 ENV WORDPRESS_DB_USER=admin
 ENV WORDPRESS_DB_PASSWORD=srikanth12345
 ENV RDS_ENDPOINT=wordpressdb.cbzqxdwcqpcp.us-east-1.rds.amazonaws.com
-
-
 EXPOSE 80
 CMD ["apache2ctl", "-D", "FOREGROUND
