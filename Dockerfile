@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 RUN apt update -y
-RUN apt install git unzip tzdata -y
+RUN apt install  tzdata -y
 RUN apt install php apache2 php-mysqlnd -y
 WORKDIR /var/www/html
 RUN rm -rf /var/www/html/*
