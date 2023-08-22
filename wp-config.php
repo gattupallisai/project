@@ -29,7 +29,7 @@ define( 'DB_USER', '$database_user' );
 define( 'DB_PASSWORD', '$database_password' );
 
 /** Database hostname */
-define( 'DB_HOST', 'rds_endpoint' );
+define( 'DB_HOST', '$rds_endpoint' );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
