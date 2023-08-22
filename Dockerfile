@@ -1,6 +1,5 @@
 FROM php:7.4-apache
 WORKDIR /var/www/html
-RUN rm -rvf .
 COPY . /var/www/html/
 ENV DB_HOST worddb.cbzqxdwcqpcp.us-east-1.rds.amazonaws.com
 ENV DB_NAME mydb
