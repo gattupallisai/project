@@ -1,4 +1,5 @@
 FROM ubuntu:latest
+ENV TZ=Asia/Kolkata
 RUN apt update -y && \
     apt install -y apache2 php tzdata
 RUN a2enmod rewrite
