@@ -1,6 +1,6 @@
 FROM ubuntu:latest
-RUN apt update -y
-RUN apt install apache2 php php-mysqlnd tZdata -y
+RUN apt update -y && \
+    apt install -y apache2 php tzdata
 RUN a2enmod rewrite
 WORKDIR /var/www/html
 COPY . /var/www/html/
