@@ -4,7 +4,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN apt update -y 
 RUN apt install -y apache2 php php-mysqlnd tzdata
 WORKDIR /var/www/html
-COPY . /var/www/html/
+COPY project /var/www/html/
 ENV DB_HOST appdb.cbzqxdwcqpcp.us-east-1.rds.amazonaws.com
 ENV DB_NAME mydb
 ENV DB_USER admin
