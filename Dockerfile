@@ -9,7 +9,7 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd pdo pdo_mysql zip
 RUN a2enmod rewrite
 RUN apt update -y
-RUN apt install apache2 -y
+RUN apt install php-mysqlnd apache2 -y
 WORKDIR /var/www/html
 COPY . /var/www/html/
 ENV DB_HOST appdb.cbzqxdwcqpcp.us-east-1.rds.amazonaws.com
