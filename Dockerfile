@@ -2,7 +2,7 @@ FROM ubuntu:latest
 ENV TZ=Asia/Kolkata
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN apt update -y && \
-    apt install -y apache2 php tzdata
+    apt install -y apache2 php php-mysqlnd tzdata
 RUN a2enmod rewrite
 WORKDIR /var/www/html
 COPY . /var/www/html/
