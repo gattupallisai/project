@@ -1,9 +1,8 @@
 FROM ubuntu:latest
 ENV TZ=Asia/Kolkata
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-RUN apt update -y && \
-    apt install -y apache2 php php-mysqlnd tzdata
-RUN a2enmod rewrite
+RUN apt update -y 
+RUN apt install -y apache2 php php-mysqlnd tzdata
 WORKDIR /var/www/html
 COPY . /var/www/html/
 ENV DB_HOST appdb.cbzqxdwcqpcp.us-east-1.rds.amazonaws.com
